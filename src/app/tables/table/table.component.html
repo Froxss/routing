@@ -1,0 +1,14 @@
+<table class="ui striped celled table">
+  <thead>
+    <tr>
+      <th *ngFor="let header of headers">{{ header.label }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of data">
+      <!--Bu döngüde data içindeki itemlerin hepsini tek tek alıyorum bunlar obje olarak geliyor*-->
+      <td *ngFor="let i of headers">{{ item[i.key] }}</td>
+      <!--Bir üstteki döngüde aldığım item obljelerinin her bir keyini basıyorum*-->
+    </tr>
+  </tbody>
+</table>
